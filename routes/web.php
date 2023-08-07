@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;  //外部にあるPostControllerクラスをインポート。
 
 
-Route::get('/posts', [PostController::class, 'index']); 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +15,4 @@ Route::get('/posts', [PostController::class, 'index']);
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+Route::get('/', [PostController::class, 'index']);
