@@ -16,4 +16,11 @@ class PostController extends Controller
     {
         return view('posts/show')->with(['post' => $post -> getSpecific($id)]);
     }
+    
+    public function create(Post $post)
+    {
+        return view('posts/create');
+    }
+    
+    
 }
