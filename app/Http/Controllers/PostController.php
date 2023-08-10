@@ -26,7 +26,7 @@ class PostController extends Controller
     {
         $input = $request['post'];
         $post->fill($input)->save();
-        return redirect('../' . $post->id);
+        return redirect('/post' . $post->id);
     }
     
     public function edit(Post $post, int $id)
@@ -34,4 +34,12 @@ class PostController extends Controller
         return view('posts/edit')->with(['post' => $post -> getSpecific($id)]);
     }
     
+    public function update(Request $request, Post $post, int $id)
+    {
+        $post -> getSpecific($id);
+        $input = $request['post'];
+        $post -> fill($input) -> save();
+        
+        return redirect('../'. $post->id);
+    }
 }

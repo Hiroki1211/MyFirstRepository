@@ -12,6 +12,9 @@
             <h2 class = 'title'>{{ $post->title }}</h2>
             <p class='body'>{{ $post->body }}</p>
         </div>
+        <div class="edit">
+            <a href='{{$post->id}}/edit'>編集</a>
+        </div>
         <a href='..'>戻る</a>
     </body>
     
