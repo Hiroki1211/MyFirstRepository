@@ -29,4 +29,9 @@ class PostController extends Controller
         return redirect('../' . $post->id);
     }
     
+    public function edit(Post $post, int $id)
+    {
+        return view('posts/edit')->with(['post' => $post -> getSpecific($id)]);
+    }
+    
 }
