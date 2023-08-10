@@ -26,7 +26,7 @@ class PostController extends Controller
     {
         $input = $request['post'];
         $post->fill($input)->save();
-        return redirect('/' . $post->id);
+        return redirect('../' . $post->id);
     }
     
 }
