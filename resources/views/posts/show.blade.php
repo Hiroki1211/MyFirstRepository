@@ -10,6 +10,7 @@
         <h1>Blog Name</h1>
         <div class = 'post'>
             <h2 class = 'title'>{{ $post->title }}</h2>
+            <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a>
             <p class='body'>{{ $post->body }}</p>
         </div>
         <div class="edit">
